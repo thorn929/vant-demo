@@ -19,7 +19,7 @@ yarn build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## module 优势
-CSS模块顾名思义就是希望能真正将CSS模块化化，其非常单纯，通过webpack帮我们自动化，动态产生类名称，解决以下问题，又可以和其他前置器一同使用，如SASS
+CSS模块顾名思义就是希望能真正将CSS模块化化，其非常单纯，通过webpack帮我们自动化，动态产生类名称，解决以下问题，又可以和其他前置器一同使用，如Less
 
 + 解决了BEM要解决的问题
   + 降低了css权重， 降低了模块之间的相依性
