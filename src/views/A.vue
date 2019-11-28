@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <van-collapse v-model="activeNames">
-            <van-collapse-item title="标题1" name="1">内容</van-collapse-item>
-        </van-collapse>
-        <div  :style='{
-             "min-height": 11 + "px"
-          }'>2</div>
-    </div>
+  <div>
+    <van-collapse v-model="activeNames">
+      <van-collapse-item title="标题1" name="1">内容</van-collapse-item>
+    </van-collapse>
+    <div :style='{transform:`translate(${1}px, ${2}px)`}'>test</div>
+  </div>
 </template>
 <script>
 import { Collapse, CollapseItem } from 'vant'
