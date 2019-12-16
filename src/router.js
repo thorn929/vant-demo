@@ -5,7 +5,7 @@ import routes from '@/routes/'
 Vue.use(Router)
 
 const router = new Router({
-    // mode: 'history',
+    mode: 'history',
     // scrollBehavior() {
     //     return { x: 0, y: 0 }
     // },

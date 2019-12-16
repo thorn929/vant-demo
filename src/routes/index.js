@@ -1,3 +1,4 @@
+import dom from './dom'
 export default [
   {
     path: '/',
@@ -21,16 +22,17 @@ export default [
   },
   {
     path: '/b',
-    redirect: () => {
-      window.location.href = 'https://www.baidu.com'
-    }
+    alias: '/cc',
+    component: () => import('@/views/C.vue')
   },
   {
     path: '/c/:id',
     component: () => import('@/views/C.vue')
   },
+  ...dom,
   {
-    path: '*',
-    component: () => import('@/views/404.vue')
+    path: "*",
+    // component: () => import('@/views/404.vue'),
+    redirect: '/'
   }
 ]
