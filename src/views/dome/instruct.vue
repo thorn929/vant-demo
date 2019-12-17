@@ -11,6 +11,7 @@
     <img v-bind:src='url' />
     <img :src='url' />
     <div :class="{ red: isRed }"></div>
+    <div :class="[isActive ? activeClass : '', errorClass]"></div>
 
     <!-- prop -->
     <son :temData='temData'/>
