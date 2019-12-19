@@ -1,4 +1,4 @@
-import dome from './dome'
+import demo from './demo'
 export default [
   {
     path: '/',
@@ -29,10 +29,10 @@ export default [
     path: '/c/:id',
     component: () => import('@/views/C.vue')
   },
-  ...dome,
+  ...demo,
   {
     path: "*",
-    // component: () => import('@/views/404.vue'),
-    redirect: '/'
+    // component: () => import('@/views/404.vue')
+    // redirect: '/'
   }
 ]

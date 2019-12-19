@@ -16,7 +16,7 @@ export default {
       immediate: true,
       // 2. 比如监听的是一个对象
       deep: true
-  }
+    }
   },
   created() {
     console.log(1111)

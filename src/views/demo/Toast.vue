@@ -8,27 +8,27 @@
 </template>
 <script>
 export default {
-  name: 'app',
-   methods:{
+  methods:{
     openTop(){
-      this.$toast.top('t');
+      this.$toast.top('t')
     },
     openCenter(){
-      this.$toast.center('c');
+      this.$toast.center('c')
     },
     openBottom(){
-      this.$toast('bottom1111'); // or 
-      // this.$toast.bottom('bottom'); 
+      this.$toast('bottom123456')  // or this.$toast.bottom('bottom')
+      /**
+       * 
+       */
     },
     openLoading(){
-      this.$loading('loading...');
-      let self = this;
-      setTimeout(function () {
-        self.closeLoading()
+      this.$loading('loading...')
+      setTimeout(() => {
+        this.closeLoading()
       }, 2000)
     },
     closeLoading(){
-      this.$loading.close();
+      this.$loading.close()
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click='test'>
     首页
   </div>
 </template>
@@ -16,7 +16,9 @@ export default {
     }
   },
   methods: {
-
+    test() {
+      this.$router.push('/referer')
+    }
   },
   created() {
   },
