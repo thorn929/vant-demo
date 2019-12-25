@@ -1,8 +1,8 @@
 <template>
   <div>
-    dome
-     == {{list}} ==
-     <div @click='test'> test</div>
+    <p v-for='(item, $index) in list' :key='$index' @click='link(item)'>
+      {{$index}}. {{item}}
+    </p>
   </div>
 </template>
 <script>
@@ -11,16 +11,17 @@ export default {
   mixins: [page],
   data() {
     return {
-      list: [1, 2]
+      list: ['instruct', 'parent', 'for', 'toast', 'nextTick', 'render', 'unRender', 'directive']
     }
   },
   methods: {
-    test() {
-      this.list.push(33)
+    link(item) {
+      this.$router.push(item)
     }
   },
   mounted() {
-    console.log(this.publicData)
+    // mixins
+    // console.log(this.publicData)
     // this.publicFun()
   }
 }

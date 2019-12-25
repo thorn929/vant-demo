@@ -1,5 +1,9 @@
 export default [
   {
+    path: '/demo',
+    component: () => import('@/views/demo/index')
+  },
+  {
     path: '/instruct',
     component: () => import('@/views/demo/instruct')
   },
@@ -10,10 +14,6 @@ export default [
   {
     path: '/for',
     component: () => import('@/views/demo/for')
-  },
-  {
-    path: '/demo',
-    component: () => import('@/views/demo/index')
   },
   {
     path: '/toast',
@@ -31,14 +31,8 @@ export default [
     path: '/unRender',
     component: () => import('@/views/demo/unRender')
   },
-  
-  // referer
   {
-    path: "/referer",
-    redirect: '/b'
-  },
-  {
-    path: "/referer",
-    component: () => import('@/views/demo/Referer')
+    path: '/directive',
+    component: () => import('@/views/demo/directive')
   }
 ]
