@@ -34,5 +34,13 @@ export default [
   {
     path: '/directive',
     component: () => import('@/views/demo/directive')
+  },
+  {
+    path: '/father',
+    component: () => import('@/views/demo/provide/father')
+  },
+  {
+    path: '/vuex',
+    component: () => import('@/views/demo/vuex')
   }
 ]

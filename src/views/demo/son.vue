@@ -4,6 +4,7 @@
     <div>子：{{parents}}</div>
     <br>
     <div @click='modifyMessage' v-if="isModel">点击利用model修改父组件</div>
+    <div @click='sendBrother'>点击向兄弟组件传值</div>
   </div>
 </template>
 <script>
@@ -38,14 +39,18 @@ export default {
       this.$emit('parentEvent', "model, 子组件数据")
       // 更改父组件的
       // this.$emit('input', "model, 子组件数据")
+    },
+    sendBrother() {
+      this.$bus.$emit("comData", "son组件，给兄弟组件传值了")
     }
   },
   mounted() {
     // 场景：子组件关闭父组件弹框
-    // 1. 子组件修改父组件
+    // 1. 子组件修改父组件, 获取父实例的方法和属性
+    // this.$parent.parentMethod()
     //  this.$parent.parents = 'son，===='
     // 2. 子 update 父sync
-      // this.$emit('update:parents', 'son')
+      // this.$emit('update:parents', '我要更新父组件')
     // 3. 子 emit && 父on 
     this.$emit('modifyMessage', '我是子组件， 我想修改父组件的值')
     // 4. model 

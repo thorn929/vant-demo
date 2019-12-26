@@ -19,6 +19,10 @@
       <son ref='parents' />
     </div>
     <br>
+    <div style='border: 1px solid blue'>
+      brother:
+      <brother />
+    </div>
     <div>
       父: <span ref='test'>{{parents}}</span>
     </div>
@@ -29,6 +33,7 @@
 </template>
 <script>
 import son from './son'
+import brother from './brother'
 export default {
   data() {
     return {
@@ -37,12 +42,16 @@ export default {
     }
   },
   components: {
-    son
+    son,
+    brother
   },
   methods: {
     modifyMessage(value) {
       console.log(value)
       // this.parents = value
+    },
+    parentMethod() {
+      alert('我是来自父组件的方法')
     }
   },
   mounted() {

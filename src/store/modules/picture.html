@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+      <label for="uploadFileBtn"></label>
+      <input id="uploadFileBtn" type="file" accept="image/*" multiple>
+    </form>
+  <script>
+
+function previewImgFile(event, files, index) {
+    var _files = files || event.target.files;
+    var _index = index || 0;
+    var reader = new FileReader();
+
+    reader.onload = function(event) {
+      var eImg = document.createElement('img');
+      eImg.src = event.target.result;
+      document.body.appendChild(eImg);
+
+      if ((_index += 1) < _files.length) previewFiles(event, _files, _index);
+    }
+
+    reader.readAsDataURL(_files[_index]);
+  }
+
+  document.querySelector('#uploadFileBtn').addEventListener('change', previewImgFile, false);
+  function uploadUserFile(event) {
+    var files = event.target.files;
+    var formData = new FormData();
+    var request = new XMLHttpRequest();
+
+    for (var i = 0, len = files.length; i < len; i++) {
+      formData.append('file', files[i]);
+    }
+
+    request.open('POST', 'http://10.10.21.12:8880/uploads');
+    console.log(formData)
+    request.send(formData);
+
+    request.onload = function(event) {
+      // var oResponse = JSON.parse(event.target.response);
+    }
+  }
+
+  document.querySelector('#uploadFileBtn').addEventListener('change', uploadUserFile, false);
+    </script>
+</body>
+</html>

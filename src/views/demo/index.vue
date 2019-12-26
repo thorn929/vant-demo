@@ -11,7 +11,7 @@ export default {
   mixins: [page],
   data() {
     return {
-      list: ['instruct', 'parent', 'for', 'toast', 'nextTick', 'render', 'unRender', 'directive']
+      list: ['instruct', 'parent', 'for', 'toast', 'nextTick', 'render', 'unRender', 'directive', 'vuex']
     }
   },
   methods: {
