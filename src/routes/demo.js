@@ -36,8 +36,8 @@ export default [
     component: () => import('@/views/demo/directive')
   },
   {
-    path: '/father',
-    component: () => import('@/views/demo/provide/father')
+    path: '/provide',
+    component: () => import('@/views/demo/provide/parent')
   },
   {
     path: '/attr',

@@ -3,12 +3,10 @@
     father: {{message}}
     <div @click='modify'>点击修改数据</div>
     <son />
-    <grandson />
   </div>
 </template>
 <script>
 import son from './son'
-import grandson from './grandson'
 export default {
   /** 
    * 官网：https://cn.vuejs.org/v2/api/#provide-inject
@@ -33,8 +31,7 @@ export default {
     }
   },
   components: {
-    son,
-    grandson
+    son
   },
   methods: {
     modify() {

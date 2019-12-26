@@ -1,5 +1,7 @@
 <template>
   <div>
+    parent: {{name}}
+    <div @click='modify'>点击修改数据</div>
     <son :name='name' :age='age' :gender='gender' @test='test'/>
   </div>
 </template>
@@ -35,10 +37,10 @@ export default {
   methods: {
     test(value) {
       console.log(value, ': test--------')
+    },
+    modify() {
+      this.name = 'test'
     }
-  },
-  // mounted() {
-  //   this.test('parent')
-  // }
+  }
 }
 </script>

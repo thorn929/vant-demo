@@ -1,6 +1,6 @@
 <template>
-  <div >
-    <p>name: {{ name }}</p>
+  <div style='border: 2px solid blue'>
+    <p>son的name: {{ name }}</p>
     <p>son的$attrs: {{ $attrs }}</p>
     <grandson v-bind='$attrs' v-on="$listeners" />
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style='border: 1px solid red'>
     grandson:  {{message}}
   </div>
 </template>
