@@ -44,6 +44,10 @@ export default [
     component: () => import('@/views/demo/attrs/parent')
   },
   {
+    path: '/set',
+    component: () => import('@/views/demo/set')
+  },
+  {
     path: '/vuex',
     component: () => import('@/views/demo/vuex')
   }

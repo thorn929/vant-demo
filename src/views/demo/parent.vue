@@ -65,7 +65,7 @@ export default {
      * 
      */
     // ref.1
-    this.$refs.parents.sendMessage('传给子组件')
+    this.$refs.parents.sendMessage('parentsModel')
     // ref.2
     console.log(this.$refs.test)
   }
