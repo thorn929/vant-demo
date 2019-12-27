@@ -1,29 +1,21 @@
 <template>
   <div style='border: 1px solid red'>
-    <h5>我是子组件</h5>
-    <div>子：{{parents}}</div>
+    <div>子：{{receiveData}}</div>
     <br>
-    <div @click='sendBrother'>点击向兄弟组件传值</div>
   </div>
 </template>
 <script>
 export default {
-  data () {
+  props: ['parents'],
+  data() {
     return {
-    }
-  },
-  // props: ['parents'],
-  props: {
-    // 推荐
-    parents: {
-      type: [String, Number],
-      required: false,
-      default: 'props为传值，此为默认值'
+      receiveData: ''
     }
   },
   methods: {
-    sendBrother() {
-      this.$bus.$emit("comData", "son组件，给兄弟组件传值了")
+    sendMessage(value) {
+      console.log('这里是ref', value)
+      this.receiveData = value
     }
   },
   mounted() {

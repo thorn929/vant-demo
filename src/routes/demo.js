@@ -48,6 +48,22 @@ export default [
     component: () => import('@/views/demo/set')
   },
   {
+    path: '/model',
+    component: () => import('@/views/demo/modeL/parent')
+  },
+  {
+    path: '/ref',
+    component: () => import('@/views/demo/ref/parent')
+  },
+  {
+    path: '/emit',
+    component: () => import('@/views/demo/emit/parent')
+  },
+  {
+    path: '/bus',
+    component: () => import('@/views/demo/bus/parent')
+  },
+  {
     path: '/vuex',
     component: () => import('@/views/demo/vuex')
   }

@@ -1,8 +1,8 @@
 <template>
   <div>
     <div>
-      model && props：
-      <son :parents='parents' @modifyMessage="modifyMessage" v-model='parentsModel' :isModel='true' />
+      <!-- model && props：
+      <son :parents='parents' @modifyMessage="modifyMessage" v-model='parentsModel' :isModel='true' /> -->
     </div>
     <br>
     <!-- emit/sync 子传父 -->
