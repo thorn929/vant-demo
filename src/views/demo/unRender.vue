@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-import anchored from './UnAnchored'
+import anchored from './anchored'
 export default {
   data() {
     return {

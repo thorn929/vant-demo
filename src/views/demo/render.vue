@@ -11,7 +11,6 @@ export default {
       level: 1
     }
   },
-  //
   components: {
     test: {
       props: ['level'],
