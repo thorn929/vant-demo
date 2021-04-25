@@ -14,6 +14,7 @@ export default {
   },
   methods: {
     _trigger() {
+    /** 注意如果当前同时修改的其他值能监听到，那么  this.obj 会添加进去*/
       this.$set(this.obj, 'b', 2)
     }
   },
